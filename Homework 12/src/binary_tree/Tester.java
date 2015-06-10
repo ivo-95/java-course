@@ -16,6 +16,6 @@ public class Tester {
 		node3.setRight(node4);
 		node4.setLeft(node5);
 		node5.setRight(node6);
-		System.out.println(root.getDepth());
+		System.out.println(node2.getDepth());
 	}
 }
