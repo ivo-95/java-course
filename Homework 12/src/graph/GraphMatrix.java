@@ -50,4 +50,7 @@ public class GraphMatrix {
     	return false;
     }
 
+    public int[][] getMatrix() {
+    	return matrix;
+    }
 }
