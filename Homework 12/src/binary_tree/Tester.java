@@ -11,11 +11,11 @@ public class Tester {
 		BinaryTree node5 = new BinaryTree(5);
 		BinaryTree node6 = new BinaryTree(6);
 		root.setLeft(node1);
-		node1.setRight(node2);
-		node2.setLeft(node3);
-		node3.setRight(node4);
-		node4.setLeft(node5);
-		node5.setRight(node6);
-		System.out.println(node2.getDepth());
+		root.setRight(node2);
+		node1.setLeft(node3);
+		node2.setRight(node4);
+		node3.setLeft(node5);
+		node4.setRight(node6);
+		System.out.println(root.getDepth());
 	}
 }

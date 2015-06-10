@@ -64,23 +64,35 @@ public class BinaryTree {
 	
 	public int getDepth() {
 		depth = 0;
-		depthHelper(this);
+		depthHelper(this, 0);
 		return depth;
 	}
 	
-	private void depthHelper(BinaryTree node) {
+	private void depthHelper(BinaryTree node, int temp) {
 		if (node.getLeft() == null && node.getRight() == null) {
 			return;
 		} else if (node.getLeft() != null && node.getRight() == null) {
-			depth++;
-			depthHelper(node.getLeft());
+			if (temp >= depth)
+			{
+				temp++;
+				depth++;
+			}
+			depthHelper(node.getLeft(), temp);
 		} else if (node.getRight() != null && node.getLeft() == null) {
-			depth++;
-			depthHelper(node.getRight());
+			if (temp >= depth)
+			{
+				temp++;
+				depth++;
+			}
+			depthHelper(node.getRight(), temp);
 		} else {
-			depth++;
-			depthHelper(node.getLeft());
-			depthHelper(node.getRight());
+			if (temp >= depth)
+			{
+				temp++;
+				depth++;
+			}
+			depthHelper(node.getLeft(), temp);
+			depthHelper(node.getRight(), temp);
 		}
 	}
 }
